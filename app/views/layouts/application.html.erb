@@ -4,12 +4,18 @@
     <title>RailsSimpleAirbnb</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <nav>
+      <div class="nav-left">Simple AirBnB!</div>
+      <div class="nav-right"><%= link_to 'Ajouter un appartement', new_flat_path, class: 'btn btn-link' %></div>
+    </nav>
+    <div class="main-container">
+      <%= yield %>
+    </div>
   </body>
 </html>
